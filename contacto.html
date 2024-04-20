@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte Contemporáneo</title>
+    <link rel="stylesheet" href="galeriaArte.css">
+</head>
+<body>
+<!-- Sección de contacto -->
+<section id="contacto" class="section">
+    <form class="form">
+        <h2>Contacto</h2>
+        <p class="infoContacto">Los campos marcados con * son obligatorios</p>
+        <p type="Nombre*:">
+            <input id="nombre" type="text" required placeholder="Escriba su nombre aquí.."/></p>
+        <p type="Correo*:">
+            <input type="email" id="email" required placeholder="Déjanos tu correo para contactarte de vuelta.."/></p>
+        <p type="Dirección:">
+            <input id="direccion" type="text" placeholder="Ingrese su dirección.."/></p>
+        <p type="Número de teléfono:">
+            <input id="telefono" type="text" placeholder="+5600000000"/></p>
+        <p type="Tipo de solicitud*:">
+            <select required>
+                <option value="">Elija una opción...</option>
+                <option value="compra">Compra</option>
+                <option value="consulta">Consulta</option>
+                <option value="venta">Venta</option>
+            </select>
+        </p>
+        <p type="Message*:">
+            <textarea id="mensaje" required placeholder="Indícanos el motivo por el que nos contactas.."></textarea></p>
+        <button>Enviar mensaje</button>
+        <div>
+            <span class="fa fa-phone"></span>+569 0000 0000
+            <span class="fa fa-envelope-o"></span>christopher.gomez.araya@ciisa.cl
+        </div>
+    </form>
+</section>
+
+<script src="js/galeriaArte.js"></script>
+</body>
+</html>

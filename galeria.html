@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte Contemporáneo</title>
+    <link rel="stylesheet" href="galeriaArte.css">
+</head>
+<body>
+<!-- Sección de galería -->
+<section id="galeria" class="section">
+    <h2>Galería de Arte</h2>
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="arte1.png" alt="Imagen 1" class="active">
+            <img src="arte2.jpg" alt="Imagen 2">
+            <img src="arte3.jpg" alt="Imagen 3">
+            <img src="arte4.png" alt="Imagen 4">
+            <img src="arte5.jpg" alt="Imagen 5">
+            <img src="arte6.png" alt="Imagen 6">
+            <img src="arte7.png" alt="Imagen 7">
+            <img src="arte8.png" alt="Imagen 8">
+        </div>
+        <button class="carousel-btn carousel-btn-prev" onclick="prevSlide()">❮</button>
+        <button class="carousel-btn carousel-btn-next" onclick="nextSlide()">❯</button>
+        <div class="carousel-preview">
+            <img src="arte1.png" alt="Preview 1" onclick="jumpToSlide(0)" class="active">
+            <img src="arte2.jpg" alt="Preview 2" onclick="jumpToSlide(1)">
+            <img src="arte3.jpg" alt="Preview 3" onclick="jumpToSlide(2)">
+            <img src="arte4.png" alt="Preview 4" onclick="jumpToSlide(3)">
+            <img src="arte5.jpg" alt="Preview 5" onclick="jumpToSlide(4)">
+            <img src="arte6.png" alt="Preview 6" onclick="jumpToSlide(5)">
+            <img src="arte7.png" alt="Preview 7" onclick="jumpToSlide(6)">
+            <img src="arte8.png" alt="Preview 8" onclick="jumpToSlide(7)">
+        </div>
+    </div>
+</section>
+<script src="js/galeriaArte.js"></script>
+</body>
+</html>
