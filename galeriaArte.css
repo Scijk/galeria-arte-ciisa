@@ -3,19 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: cyan !important;
     overflow: scroll;
-}
-
-.section {
-    display: block;
-    padding: 20px;
-    text-align: center;
-    background: cyan;
-    margin:0;
-}
-.active {
-    display: block;
 }
 
 nav {
@@ -23,7 +12,6 @@ nav {
     width: auto;
     height: 100px;
     background-color: #34495e;
-    border-radius: 8px;
     font-size: 0;
 }
 nav a {
@@ -157,77 +145,21 @@ button:hover {
     color: gainsboro;
 }
 
-.carousel-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-.carousel img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: none;
-}
-.carousel img.active {
-    display: block;
-}
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    z-index: 1;
-}
-.carousel-btn-prev {
-    left: 10px;
-}
-.carousel-btn-next {
-    right: 10px;
-}
-.carousel-preview {
-    position: absolute;
-    top: 10px;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-}
-.carousel-preview img {
-    width: 40px;
-    height: auto;
-    cursor: pointer;
-    margin: 0 5px;
-    opacity: 0.2;
-}
-.carousel-preview img.active {
-    opacity: 1;
+.row-galeria {
+    padding: 5px;
+    background-color: cyan;
 }
 
-.carousel-preview img:hover {
-    width: 70px;
-    height: 100px;
-    opacity: 0.6;
+.row-galeria .col {
+    background-color: cyan;
 }
 
 .form {
-    width:380px;
-    height:790px;
     background:#e6e6e6;
     border-radius:8px;
     box-shadow:0 0 40px -10px #000;
     margin:100px auto;
-    padding:20px 30px;
-    max-width:calc(100vw - 40px);
+    padding:20px 30px 70px 30px;
     box-sizing:border-box;
     font-family:'Montserrat',sans-serif;
     position:relative
@@ -278,25 +210,23 @@ button:hover {
 .form button {
     float:right;
     padding:8px 12px;
-    margin:8px 0 0;
     font-family:'Montserrat',sans-serif;
     border:2px solid #78788c;
     background:0;
     color:#5a5a6e;
     cursor:pointer;
-    transition:all .3s
+    transition:all .3s;
+    border-radius: 6px;
 }
 .form button:hover {
     background:#78788c;color:#fff
 }
 .form div {
-    content:'Hi';
     position:absolute;
     bottom:-15px;
-    right:-20px;
+    left:-20px;
     background:#50505a;
     color:#fff;
-    width:320px;
     padding:16px 4px 16px 0;
     border-radius:6px;
     font-size:13px;
@@ -311,8 +241,7 @@ button:hover {
     height: 100px;
 }
 
-
-.footer ul {
+.footer .row {
     display: inline-grid;
     grid-auto-flow: column;
     grid-gap: 24px;
@@ -331,12 +260,7 @@ button:hover {
     box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
 }
 
-.footer li:last-child {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-}
-
-.footer li:hover ~ li p {
+.footer col:hover ~ col p {
     animation: wave-animation 0.3s infinite;
 }
 
@@ -353,6 +277,11 @@ button:hover {
 .infoContacto {
     color: cadetblue;
     font-size: 12px;
+}
+
+.toastContacto {
+    z-index: 0;
+    float: inline-start;
 }
 
 @keyframes wave-animation {

@@ -2,33 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Arte Contemporáneo</title>
     <link rel="stylesheet" href="galeriaArte.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-<!-- Sección de inicio -->
-<section id="inicio" class="section">
-    <div id="banner">
-        <img src="imagen_inicio.png" alt="Banner Galería de Arte">
-        <div class="overlay">
-            <h2 class="overlay-title">Bienvenido a nuestra taller de arte</h2>
-            <br>
-            <p class="overlay-text">
-                ¡Bienvenidos a nuestra galería de arte y espacio creativo!
-            </br>
-                En ArteTaller nos enorgullece presentar una colección diversa y emocionante de obras que celebran la expresión artística en todas sus formas.
-            </br>
-                Existen variadas obras en el sitio que permiten apreciar de forma magistral la intención plasmada por el autor
-            </br>
-                Acompáñanos en este recorrido y dejate deleitar por algunas de las obras inéditas que aquí te presentamos
-            </p>
-            <p class="overlay-text">
-                Cada pieza aquí cuenta una historia única. ¡Disfruten del viaje a través de ArteTaller!
-            </p>
+    <div class="flex container-fluid text-center">
+        <div class="navbar-nav">
+                <div class="row align-items-start">
+                    <nav>
+                        <a class="col" href="index.html">Inicio</a>
+                        <a class="col" href="galeria.html">Galería</a>
+                        <a class="col" href="contacto.html">Contacto</a>
+                        <div id="navId" class="animation start-inicio"></div>
+                    </nav>
+                </div>
+        </div>
+        <!-- Sección de inicio -->
+            <div class="">
+                <div id="banner">
+                    <img src="imagen_inicio.png" alt="Banner Galería de Arte">
+                    <div class="overlay">
+                        <h2 class="overlay-title">Bienvenido a nuestro taller de arte</h2>
+                        <br>
+                        <p class="overlay-text">
+                            ¡Bienvenidos a nuestra galería de arte y espacio creativo!
+                        </br>
+                            En ArteTaller nos enorgullece presentar una colección diversa y emocionante de obras que celebran la expresión artística en todas sus formas.
+                        </br>
+                            Existen variadas obras en el sitio que permiten apreciar de forma magistral la intención plasmada por el autor
+                        </br>
+                            Acompáñanos en este recorrido y dejate deleitar por algunas de las obras inéditas que aquí te presentamos
+                        </p>
+                        <p class="overlay-text">
+                            Cada pieza aquí cuenta una historia única. ¡Disfruten del viaje a través de ArteTaller!
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="container-fluid text-center footer">
+        <div class="row">
+            <div class="col">
+                <p>👋</p>
+            </div>
+            <div class="col">
+                <a href="https://vercel.com/chris-projects" target="_blank">Vercel</a>
+            </div>
+            <div class="col">
+                <a href="mailto:christopher.gome.araya@ciisa.cl" target="_blank">Email</a>
+            </div>
+            <div class="col">
+                <a href="https://github.com/Scijk" target="_blank">Github</a>
+            </div>
+            
+        </div>
+        <div class="row">
+            <p>Creado por Christopher Gómez</p>
         </div>
     </div>
-</section>
-<script src="js/galeriaArte.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

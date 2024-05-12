@@ -5,39 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arte Contemporáneo</title>
     <link rel="stylesheet" href="galeriaArte.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-<!-- Sección de contacto -->
-<section id="contacto" class="section">
-    <form class="form">
-        <h2>Contacto</h2>
-        <p class="infoContacto">Los campos marcados con * son obligatorios</p>
-        <p type="Nombre*:">
-            <input id="nombre" type="text" required placeholder="Escriba su nombre aquí.."/></p>
-        <p type="Correo*:">
-            <input type="email" id="email" required placeholder="Déjanos tu correo para contactarte de vuelta.."/></p>
-        <p type="Dirección:">
-            <input id="direccion" type="text" placeholder="Ingrese su dirección.."/></p>
-        <p type="Número de teléfono:">
-            <input id="telefono" type="text" placeholder="+5600000000"/></p>
-        <p type="Tipo de solicitud*:">
-            <select required>
-                <option value="">Elija una opción...</option>
-                <option value="compra">Compra</option>
-                <option value="consulta">Consulta</option>
-                <option value="venta">Venta</option>
-            </select>
-        </p>
-        <p type="Message*:">
-            <textarea id="mensaje" required placeholder="Indícanos el motivo por el que nos contactas.."></textarea></p>
-        <button>Enviar mensaje</button>
-        <div>
-            <span class="fa fa-phone"></span>+569 0000 0000
-            <span class="fa fa-envelope-o"></span>christopher.gomez.araya@ciisa.cl
+    <div class="container-fluid">
+        <div class="navbar-nav">
+            <div class="row align-items-start">
+                <nav>
+                    <a class="col" href="index.html">Inicio</a>
+                    <a class="col" href="galeria.html">Galería</a>
+                    <a class="col" href="contacto.html">Contacto</a>
+                    <div id="navId" class="animation start-contacto"></div>
+                </nav>
+            </div>
         </div>
-    </form>
-</section>
+        <!-- Sección de contacto -->
+        <form class="form" id="contacto" onsubmit="return showToast()">
+            <h2>Contacto</h2>
+            <p class="infoContacto">Los campos marcados con * son obligatorios</p>
+            <p type="Nombre*:">
+                <input id="nombre" type="text" required placeholder="Escriba su nombre aquí.."/></p>
+            <p type="Correo*:">
+                <input type="email" id="email" required placeholder="Déjanos tu correo para contactarte de vuelta.."/></p>
+            <p type="Dirección*:">
+                <input id="direccion" type="text" required placeholder="Ingrese su dirección.."/></p>
+            <p type="Número de teléfono*:">
+                <input id="telefono" type="text" required placeholder="+5600000000"/></p>
+            <p type="Tipo de solicitud*:">
+                <select required>
+                    <option value="">Elija una opción...</option>
+                    <option value="compra">Compra</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="venta">Venta</option>
+                </select>
+            </p>
+            <p type="Mensaje*:">
+                <textarea id="mensaje" required placeholder="Indícanos el motivo por el que nos contactas.."></textarea></p>
+            <button id="liveToastBtn">Enviar mensaje</button>
+            <div>
+                <span class="fa fa-phone"> +569 0000 0000</span>
+                <br>
+                <span class="fa fa-envelope-open-text"> galeria.arte@ciisa.cl</span>
+            </div>
+        </form>
+    </div>
+    <div class="container-fluid text-center footer">
+        <div class="row">
+            <div class="col">
+                <p>👋</p>
+            </div>
+            <div class="col">
+                <a href="https://vercel.com/chris-projects" target="_blank">Vercel</a>
+            </div>
+            <div class="col">
+                <a href="mailto:christopher.gome.araya@ciisa.cl" target="_blank">Email</a>
+            </div>
+            <div class="col">
+                <a href="https://github.com/Scijk" target="_blank">Github</a>
+            </div>
+            
+        </div>
+        <div class="row">
+            <p>Creado por Christopher Gómez</p>
+        </div>
+    </div>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Información</strong>
+                <small>Éxito</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Su solicitud de contacto ha sido enviada.
+            </div>
+        </div>
+    </div>
 
-<script src="js/galeriaArte.js"></script>
+    <script src="js/galeriaArte.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
