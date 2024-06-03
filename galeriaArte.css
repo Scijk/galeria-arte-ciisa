@@ -284,6 +284,10 @@ button:hover {
     float: inline-start;
 }
 
+.btn-Eliminar {
+    margin-top: 10px;
+}
+
 @keyframes wave-animation {
     0%,
     100% {
